@@ -2,6 +2,7 @@ import Link from "next/link";
 import Headeritems from "./Headeritems";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillInfoCircleFill } from 'react-icons/bs';
+import Darkmode from "./Darkmode";
 
 export default function Header() {
     return (
@@ -13,8 +14,9 @@ export default function Header() {
              <Headeritems title='about' Icon={BsFillInfoCircleFill} address='/about'/>    
             </div> 
             <div className="flex">
-             <Link href='/'> <h1 className="font-bold bg-amber-500 p-2 rounded-md">IMDB</h1></Link>
-                <span className="p-2 hidden sm:inline">clone</span>
+                <Darkmode/>
+             <Link href='/'> <h1 className="font-bold bg-amber-500 p-2 rounded-md">IMDB</h1>
+                <span className="p-2 hidden sm:inline">clone</span></Link>
             </div>
         </div>
         </>
