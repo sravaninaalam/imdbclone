@@ -15,7 +15,7 @@ export default function Header() {
             </div> 
             <div className="flex">
                 <Darkmode/>
-             <Link href='/'> <h1 className="font-bold bg-amber-500 p-2 rounded-md">IMDB</h1>
+             <Link href='/' className="flex"> <h1 className="font-bold bg-amber-500 p-2 rounded-md">IMDB</h1>
                 <span className="p-2 hidden sm:inline">clone</span></Link>
             </div>
         </div>
