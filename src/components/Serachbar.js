@@ -1,12 +1,15 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Serachbar() {
+  const router=useRouter()
   const[search,setSearch]=useState('')
   function handleSubmit(e){
       e.preventDefault()
-
+     router.push(`/search/${search}`);
+     setSearch('')
   }
     return (
         <div>
