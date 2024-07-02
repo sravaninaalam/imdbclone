@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Serachbar from "@/components/Serachbar";
 import Provider from "./Provider";
+import ThemeProvider from "./Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       
       <body className={inter.className}>
-        <Provider>
+      <ThemeProvider>
             <Header/>
             <Navbar/>
             <Serachbar/>
             {children}
-        </Provider>
+        </ThemeProvider>
       </body>
     </html>
   );
