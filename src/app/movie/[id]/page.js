@@ -14,8 +14,8 @@ export default async function SingleMoviePage({params}) {
 
     return (
         <div className="max-w-5xl  mx-auto flex my-5 p-2 gap-4">
-         <div className=''>
-            <Image src={singlemovie.Poster}  height={400} width={550} alt='movie poster' className=''/>
+         <div className='w-[50%] '>
+            <Image src={singlemovie.Poster}  width={200} height={50} alt='movie poster' className='w-auto h-auto'/>
         </div>
             <div>
                 <h1 className='p-1 m-1 text-2xl font-semibold'>{singlemovie.Title} </h1>
