@@ -7,9 +7,9 @@ const getData=async()=>{
 	const result = await response.json();
   return result
  }
-export default async function Home() {
+export default async function Recommended() {
   const datamovies=await getData()
-  const movies=datamovies.slice(0,30)
+  const movies=datamovies.slice(70)
   return (
      <div className="flex flex-wrap max-w-6xl p-1 mx-auto">
        {movies.map((movie)=><Moviescard movie={movie} key={movie.imdbid}/>)}
