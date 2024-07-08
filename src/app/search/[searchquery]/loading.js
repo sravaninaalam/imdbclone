@@ -1,17 +1,10 @@
 export default function loading() {
-    return (
-        <>
-        <div className="flex max-w-5xl mx-auto ">
-            <div className="w-72 h-72  bg-gray-300 duration-700">
-              
-           </div>
-           <div >
-               <h1 className="rounded-md w-96 bg-gray-300 p-2 m-2 "></h1>
-               <h1 className="rounded-md w-96 bg-gray-300 p-2 m-2 "></h1>
-               <h1 className="rounded-md w-96 bg-gray-300 p-2 m-2 "></h1>
-           </div>
-           </div>
-        </>
-        
+ 
+    const arr=Array(9).fill("")
+    return(
+        <div className="flex flex-wrap max-w-6xl mx-auto">
+            {arr.map((ar,index)=><div key={index} className="w-72 h-52 bg-gray-300 rounded-md m-4"></div>)}
+        </div>
+
     );
 }
