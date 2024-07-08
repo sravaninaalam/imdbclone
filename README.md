@@ -44,4 +44,6 @@ Darkmode==>
             in tailwind config add darkmode:"class"
         crete Darkmode file in components and add in header
 
-
+//TO BE DEVELOPED
+  search container=>Searc results for [searched movie name](search reslt card )=>on click=>'/movieId'
+  if !found =>sorry no results found message 
