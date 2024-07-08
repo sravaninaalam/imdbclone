@@ -19,13 +19,13 @@ export default async function Searchpage({params}) {
        <>
        {result ?
        <div>
-         <h1 className='mx-20 p-2 font-serif text-2xl text-amber-600'>Search results for &ldquo{searchquery}</h1>
+         <h1 className='mx-20 p-2 font-serif text-2xl text-amber-600'>Search results for &ldquo;{searchquery}&ldquo;</h1>
          <div className="flex flex-wrap max-w-6xl p-1 mx-auto">
             {result.map((movie)=><Searchresults key={movie.Title} movie={movie} />)}
         </div>
         </div>
         : <div>
-             <h1 className='mx-20 p-2 font-serif text-2xl text-amber-600'>No results for &ldquo{searchquery}</h1>
+             <h1 className='mx-20 p-2 font-serif text-2xl text-amber-600'>No results for &ldquo;{searchquery}&ldquo;</h1>
         </div> }
      </>
     )
