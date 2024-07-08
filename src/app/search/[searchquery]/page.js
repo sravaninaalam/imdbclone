@@ -1,5 +1,4 @@
 
-import MovieDetails from "@/components/MovieDetails"
 import Searchresults from "@/components/Searchresults"
 
 
@@ -13,14 +12,22 @@ const getData=async(searchquery)=>{
 export default async function Searchpage({params}) {
     const{searchquery}=params
     const singlemovie=await getData(searchquery)
-    const result=singlemovie?.Search
-    // console.log(singlemovie)
-    // console.log(singlemovie)===>gives the rslt of all mves whichcontains search query
+    //multiple search results 
+    const result=singlemovie?.Search  
+
     return(
-       
-        <div className="flex flex-wrap max-w-6xl p-1 mx-auto">
-            {result.map((movie)=><Searchresults key={movie.Title} movie={movie}/>)}
+       <>
+       {result ?
+       <div>
+         <h1 className='mx-20 p-2 font-serif text-2xl text-amber-600'>Search results for "{searchquery}"</h1>
+         <div className="flex flex-wrap max-w-6xl p-1 mx-auto">
+            {result.map((movie)=><Searchresults key={movie.Title} movie={movie} />)}
         </div>
+        </div>
+        : <div>
+             <h1 className='mx-20 p-2 font-serif text-2xl text-amber-600'>No results for "{searchquery}"</h1>
+        </div> }
+     </>
     )
 }
 
